@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins&display=swap");
+
+/* media query */
+/* max-width => kalau widthnya udah lebih dari 600 jadinya ngga pakai / aturan max-width: 600px ngga berlaku lagi --- berlaku ketika width lebih kecil dari 600px / didalam 600px */
+/* @media only screen and (max-width: 600px) {
+    body {
+        background-color: blue;
+    }
+} */
+
+/* min-width => kalau widthnya lebih kecil dari 600px, aturan min-width: 600px ngga berlaku lagi --- berlakunya ketika width lebih besar dari 600px / diluar 600px */
+/* @media only screen and (min-width: 600px) {
+    body {
+        background-color: blue;
+    }
+} */
+
+@media only screen and (max-width: 775px) {
+    .col-1,
+    .col-1 p,
+    .col-2,
+    .col-3,
+    .col-4 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-container {
+        margin: 0 25px;
+    }
+}
+
+@media only screen and (min-width: 775px) {
+    .main-container {
+        margin: 0 120px;
+    }
+    .container-footer .col-1 {
+        width: 30%;
+    }
+}
+
+/* media query end */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-bottom: 1000px;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* navbar start */
+
+header {
+    padding: 25px 0;
+    box-shadow: 0 1px 10px black;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container .links {
+    align-self: center;
+}
+
+.container .links a {
+    /* background-color: saddlebrown; */
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    /* padding: 10px; */
+}
+
+.container .links a:first-child {
+    margin: 0 50 0 50px;
+}
+
+.container .links a {
+    margin: 0 50px 0 0;
+}
+
+.container .links a:nth-child(5) {
+    border: 1px solid #3d76bb;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 0;
+}
+
+.container .links a:nth-child(5):hover {
+    background-color: #3d76bb;
+    color: white;
+    font-weight: bold;
+}
+
+.container .links a:first-child.active,
+.container .links a:nth-child(2).active,
+.container .links a:nth-child(3).active,
+.container .links a:nth-child(4).active {
+    position: relative;
+    color: #3d76bb;
+    font-weight: bold;
+}
+
+.dropdown a i:hover {
+    transform: rotate(90deg);
+    transition: all 0.25s;
+}
+
+.container .links a:first-child.active span,
+.container .links a:nth-child(2).active span,
+.container .links a:nth-child(3).active span,
+.container .links a:nth-child(4).active span {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55px;
+    height: 2px;
+    background-color: #3d76bb;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style untuk link di dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgray;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Style untuk link di dropdown saat mouse mengarah ke link tersebut */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style untuk link di dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Style untuk link di dropdown saat mouse mengarah ke link tersebut */
+.dropdown-content a:hover {
+    background-color: gray;
+    color: white;
+}
+
+/* hamburger */
+/* .hamburger span {
+    border: 1px solid black;
+} */
+/* hamburger end */
+
+/* navbar end */
+
+/* footer start */
+
+footer {
+    background-color: #5da6d9;
+    padding: 50px 0;
+    color: white;
+}
+
+.container-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.container-icon i:nth-child(1) {
+    margin: 0 30px 0 5px;
+    transform: scale(2);
+    cursor: pointer;
+}
+.container-icon i:nth-child(2),
+.container-icon i:nth-child(3),
+.container-icon i:nth-child(4) {
+    margin: 0 30px 0 0;
+    transform: scale(2);
+    cursor: pointer;
+}
+
+.container-icon i:first-child:hover {
+    color: red;
+}
+
+.container-icon i:nth-child(2):hover {
+    color: lightgreen;
+}
+
+.container-icon i:nth-child(3):hover {
+    color: blue;
+}
+
+.container-icon i:last-child:hover {
+    color: red;
+}
+
+.col-2 h6,
+.col-2 p,
+.col-3 h6,
+.col-3 p,
+.col-4 h6 {
+    font-size: 16px;
+}
+
+.col-2 h6,
+.col-3 h6,
+.col-4 h6 {
+    margin-top: 10px;
+}
+
+/* footer end */
